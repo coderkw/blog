@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>常用 git 命令 | coderkw</title>
+    <meta name="description" content="coderkw&#39;s bolg">
+    
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.8e755006.css" as="style"><link rel="preload" href="/blog/assets/js/app.39f5fa0a.js" as="script"><link rel="preload" href="/blog/assets/js/2.24412e22.js" as="script"><link rel="preload" href="/blog/assets/js/6.f6f099fe.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.276d4e10.js"><link rel="prefetch" href="/blog/assets/js/11.a4ed3401.js"><link rel="prefetch" href="/blog/assets/js/12.9b270a2a.js"><link rel="prefetch" href="/blog/assets/js/13.08f569cf.js"><link rel="prefetch" href="/blog/assets/js/14.87db3662.js"><link rel="prefetch" href="/blog/assets/js/15.b9d06680.js"><link rel="prefetch" href="/blog/assets/js/16.59f63110.js"><link rel="prefetch" href="/blog/assets/js/17.efa30101.js"><link rel="prefetch" href="/blog/assets/js/3.2b7dd4fb.js"><link rel="prefetch" href="/blog/assets/js/4.2119a9f7.js"><link rel="prefetch" href="/blog/assets/js/5.1a94f09f.js"><link rel="prefetch" href="/blog/assets/js/7.0d265629.js"><link rel="prefetch" href="/blog/assets/js/8.2d4344b4.js"><link rel="prefetch" href="/blog/assets/js/9.e8d0dbe1.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.8e755006.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">coderkw</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/Guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="/blog/Base/" class="nav-link router-link-active">Base</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/FE/js/" class="nav-link">js</a></li><li class="dropdown-item"><!----> <a href="/blog/FE/vue/" class="nav-link">vue</a></li><li class="dropdown-item"><!----> <a href="/blog/FE/react/" class="nav-link">react</a></li></ul></div></div> <a href="https://github.com/coderkw/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/Guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="/blog/Base/" class="nav-link router-link-active">Base</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/FE/js/" class="nav-link">js</a></li><li class="dropdown-item"><!----> <a href="/blog/FE/vue/" class="nav-link">vue</a></li><li class="dropdown-item"><!----> <a href="/blog/FE/react/" class="nav-link">react</a></li></ul></div></div> <a href="https://github.com/coderkw/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Base</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/Base/" class="sidebar-link">Base</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Base/#base" class="sidebar-link">Base</a></li></ul></li><li><a href="/blog/Base/git.html" class="active sidebar-link">常用 git 命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Base/git.html#常用-git-命令" class="sidebar-link">常用 git 命令</a></li></ul></li><li><a href="/blog/Base/webpack.html" class="sidebar-link">模块化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Base/webpack.html#模块化" class="sidebar-link">模块化</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="常用-git-命令"><a href="#常用-git-命令" aria-hidden="true" class="header-anchor">#</a> 常用 git 命令</h2> <h3 id="工具信息命令"><a href="#工具信息命令" aria-hidden="true" class="header-anchor">#</a> 工具信息命令</h3> <div class="language- extra-class"><pre class="language-text"><code>git config --list //查看全局设置的信息
+
+</code></pre></div><ol><li>查看基本信息</li></ol> <div class="language- extra-class"><pre class="language-text"><code>git remote         //查看远程库别名
+git remote -v      // 查看当前项目远程 git 地址
+git branch -r      //查看远程库分支
+
+</code></pre></div><ol start="2"><li>版本管理</li></ol> <div class="language- extra-class"><pre class="language-text"><code>git reset --hard HEAD^      //回到上一个版本
+git reset --hard HEAD~100   //回到上100版本
+git reset --hard ${版本号}   //回到相应的版本号的版本
+git reset --HEAD &lt;文件&gt;      //回到该版本区的文件状态
+
+git diff HEAD -- &lt;文件名&gt;    //查看工作区和版本库的区别
+
+git checkout -- &lt;文件名&gt;     //若暂存区有文件则恢复到暂存区状态，否则变为版本库状态
+
+git rm -- &lt;文件名&gt;           //删除文件，版本库中的文件则是需要使用 git commit 进行提交后才能真正删除
+</code></pre></div><ol start="3"><li>远程仓库</li></ol> <div class="language- extra-class"><pre class="language-text"><code>git remote add origin git@github.com:${GITHUB用户名}/${远程仓库名}.git  //关联远程仓库
+
+git push -u origin master   //首次推送到远程，之后可以省略 -u 参数
+
+git clone git@github.com:${GITHUB用户名}/${远程仓库名}.git  //克隆仓库
+</code></pre></div><ol start="4"><li>分支管理</li></ol> <div class="language- extra-class"><pre class="language-text"><code>git branch             // 查看分支
+git branch -r          // 查看远程分支列表
+
+git branch dev        // 创建分支dev
+git branch -d dev     // 删除分支dev
+git branch -D dev     // 强制删除分支
+
+git branch -d &lt;分支名&gt; // 删除分支
+
+git checkout dev      // 切换至分支dev
+git checkout -b dev   // 创建并切换至分支dev
+
+git push origin :
+
+git merge &lt;分支名&gt;     //合并某分支到当前
+git merge --no-ff -m '${备注信息}' &lt;分支名&gt;     //合并某分支到当前
+
+git stash            //快照功能，将工作区存储
+git stash list       //查看快照列表
+git stash apply      //读取快照
+git stash drop       //删除快照
+git stash pop        //读取后删除
+
+</code></pre></div><p>其他</p> <div class="language- extra-class"><pre class="language-text"><code>git log --graph         //查看分支合并图
+
+git relog
+
+git rabase              //整理分叉
+</code></pre></div><p>介绍几个常用场景</p> <ol><li>本地git仓库未建立远程仓库关联，想托管到远程仓库中（例如 GitHub），可以使用命令 git remote</li></ol> <div class="language- extra-class"><pre class="language-text"><code>git push 
+</code></pre></div><p>待续。。。使用码云</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/Base/" class="prev router-link-active">Base</a></span> <span class="next"><a href="/blog/Base/webpack.html">模块化</a>→
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.39f5fa0a.js" defer></script><script src="/blog/assets/js/2.24412e22.js" defer></script><script src="/blog/assets/js/6.f6f099fe.js" defer></script>
+  </body>
+</html>
